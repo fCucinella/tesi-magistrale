@@ -77,8 +77,8 @@ class AdversarialDetectorThroughMutation():
         
         mutated_models = list(itertools.chain.from_iterable(mutated_models))
 
-        if os.path.exists(self.dest_path):
-            shutil.rmtree(self.dest_path)
+        if os.path.exists(self.dest_path) & len(os.listdir(self.dest_path)) > 0:
+            raise Exception('Please specify a clear path where save mutated models')
 
         for i in range(0, len(mutated_models)):
             mutated_models[i].save(self.dest_path + '/mutated_' + self.model_name + '_' + str(i) + '.hdf5')
