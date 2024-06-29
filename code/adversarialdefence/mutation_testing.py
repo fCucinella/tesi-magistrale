@@ -112,6 +112,7 @@ class AdversarialDetectorThroughMutation():
 
         return c * np.log(p1 / p0) + (n - c) * np.log((1 - p1) / (1 - p0))
 
+    ''' detection function. Original code from https://github.com/dgl-prc/m_testing_adversatial_sample/blob/master/detect/detector.py'''
     def detect(self, X, max_iter, detection_sensibility):
         stop = False
         deflected_mutated_model_count = np.zeros(X.shape[0])

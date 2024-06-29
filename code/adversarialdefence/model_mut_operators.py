@@ -1,3 +1,6 @@
+''' original code from https://github.com/tkuo-tkuo/DeepMutationOperators/blob/master/model_mut_operators.py '''
+
+
 import tensorflow as tf
 import numpy as np
 import keras
